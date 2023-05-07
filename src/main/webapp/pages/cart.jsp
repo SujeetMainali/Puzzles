@@ -33,7 +33,7 @@ String admin = (String) session.getAttribute("admin");
 	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../css/style.css" />
-<title>Cart</title>
+<title>Puzzles | Cart</title>
 </head>
 <body>
 	<c:set var="userEmail" value="${user }" />
@@ -45,50 +45,24 @@ String admin = (String) session.getAttribute("admin");
 		WHERE cart.product_id = products.product_id
 		AND user = "${userEmail}"
 	</sql:query>
+
 	<nav id="navbar">
 		<h1 class="logo">Puzzles</h1>
 		<ul>
 			<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
 			<li><a
 				href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
-			<li><a href="">About</a></li>
-			<li><a
-				href="${pageContext.request.contextPath}/pages/contact.html">Contact
-					Us</a></li>
-			<%
-			if (mySession.checkIsAdmin(admin)) {
-			%>
-			<li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Dashboard</a></li>
-			<%
-			}
-			%>
+			<li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Admin</a></li>
+			<li><a href="${pageContext.request.contextPath}/pages/login.jsp">Login</a></li>
 		</ul>
 
 		<div class="logo-container">
-			<!-- <span>Login</span> -->
-			<c:set var="userEmail" value="${user }" />
-			<form action="${pageContext.request.contextPath}/UserProfile"
-				method="get">
-				<input type="hidden" name="userEmail" value="${userEmail}" />
-				<button type="submit">
-					<i class="fa-solid fa-user"></i>
-				</button>
-			</form>
-
-			<form
-				action="
-            <%if (mySession.checkUser(user) || mySession.checkIsAdmin(admin)) {
-
-	out.print(mainPath);%>/LogoutServlet<%} else {
-	out.print(mainPath);%>/pages/login.jsp<%}%>
-            
-            "
-				method="post">
-				<button type="submit">
-					<i class="fa-solid fa-right-from-bracket"></i>
-				</button>
-			</form>
-
+			<a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i
+				class="fa-solid fa-user"></i></a> <a
+				href="${pageContext.request.contextPath}/pages/cart.jsp"><i
+				class="fa-solid fa-cart-shopping"></i></a> <a
+				href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i
+				class="fa-solid fa-right-from-bracket"></i></a>
 		</div>
 	</nav>
 

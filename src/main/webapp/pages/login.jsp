@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
-	<title>Insert title here</title>
+	<title>Puzzles | Login</title>
 </head>
 
 <body>

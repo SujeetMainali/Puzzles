@@ -28,7 +28,7 @@ String admin = (String) session.getAttribute("admin");
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/style.css" />
-<title>User Profile</title>
+<title>Puzzles | User Profile</title>
 </head>
 <c:if test="${not empty userEmail}">
 	<sql:setDataSource var="dbConnection" driver="com.mysql.jdbc.Driver"

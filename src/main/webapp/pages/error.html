@@ -10,31 +10,24 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="../css/style.css" />
-		<title>Insert title here</title>
+		<title>Error</title>
 	</head>
 	<body>
 		<nav id="navbar">
-			<h1 class="logo">Puzzles</h1>
-			<ul>
-				<li><a href="../index.jsp">Home</a></li>
-				<li><a href="./product.html">Product</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="./contact.html">Contact Us</a></li>
-			</ul>
-
-			<!-- <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search...">
-            </div> -->
-
-			<div class="logo-container">
-				<!-- <span>Login</span> -->
-				<i class="fa-solid fa-user"></i>
-				<i class="fa-solid fa-cart-shopping"></i>
-				<i class="fa-solid fa-right-from-bracket"></i>
-			</div>
-		</nav>
-
+        <h1 class="logo">Puzzles</h1>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Admin</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/login.jsp">Login</a></li>
+        </ul>
+        
+        <div class="logo-container">
+            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-user"></i></a>
+            <a href="${pageContext.request.contextPath}/pages/cart.jsp"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+    </nav>
 		<section id="error">
 			<i class="fa-solid fa-face-frown"></i>
 			<h1>404</h1>

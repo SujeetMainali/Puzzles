@@ -35,7 +35,7 @@ int productId = Integer.parseInt(prodId);
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<title>Document</title>
+<title>Puzzles | Product</title>
 </head>
 
 <body>
@@ -48,37 +48,20 @@ int productId = Integer.parseInt(prodId);
 
 
 	<nav id="navbar">
+        <h1 class="logo">Puzzles</h1>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Admin</a></li>
+            <li><a href="${pageContext.request.contextPath}/pages/login.jsp">Login</a></li>
+        </ul>
 
-		<h1 class="logo">Puzzles</h1>
-		<ul>
-			<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-			<li><a
-				href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
-			<li><a href="">About</a></li>
-			<li><a
-				href="${pageContext.request.contextPath}/pages/contact.html">Contact
-					Us</a></li>
-		</ul>
-
-		<div class="logo-container">
-			<!-- <span>Login</span> -->
-			<i class="fa-solid fa-user"></i> <i class="fa-solid fa-cart-shopping"></i>
-			<form
-				action="
-            <%if (!mySession.checkUser(user)) {
-
-	out.print(mainPath);%>/pages/login.jsp <%} else {
-				out.print(mainPath);%>/LogoutServlet<%}%>
-            
-            "
-				method="post">
-				<button type="submit">
-					<i class="fa-solid fa-right-from-bracket"></i>
-				</button>
-			</form>
-
-		</div>
-	</nav>
+        <div class="logo-container">
+            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-user"></i></a>
+            <a href="${pageContext.request.contextPath}/pages/cart.jsp"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+    </nav>
 
 	<c:forEach var="productDetail" items="${productDetails.rows}">
 
@@ -92,9 +75,11 @@ int productId = Integer.parseInt(prodId);
 				<div class="product-content">
 					<h1 class="product-title">${productDetail.name}</h1>
 					<p class="product-price">Rs. ${productDetail.price}</p>
-					<p class="product-rating">${productDetail.rating}</p>
-					<p class="product-brand">${productDetail.brand}</p>
-					<p class="product-description">${productDetail.description}</p>
+					<p class="product-rating">Rating: ${productDetail.rating}</p>
+					<p class="product-brand">Brand: ${productDetail.brand}</p>
+					<div class="product-description"><i class="fa-solid fa-circle-info"></i>Description
+					<p >${productDetail.description}</p>
+					</div>
 					<form action="${pageContext.request.contextPath}/AddToCart" method="post">
 						<c:set var="userEmail" value="${user }" />
 						<input type="hidden" name="userEmail" value="${userEmail}" />
