@@ -58,13 +58,13 @@
 				SELECT * FROM products WHERE product_id = '<%=id%>'
 			</sql:query>
 
-			
+
 
 			<c:forEach var="product" items="${allProducts.rows}">
 				<c:if test="${product != null}">
 					<input type="hidden" name="id" value="${product.product_id}" />
 				</c:if>
-				
+
 				<div class="input-group">
 					<label for="name">Name</label> <input type="text" name="name"
 						value="<c:out value='${product.name}' />" id="name" />
@@ -105,12 +105,15 @@
 			<button type="submit" class="btn-add">Update Product</button>
 		</form>
 	</section>
-	
+
 	<footer id="footer">
-    	<p>&copy; <span id="year"></span>, Puzzles, All rights reserved.</p>
-    </footer>
-    
-    <script src="${pageContext.request.contextPath}/js/main.js">
-    </script>
+		<p>
+			&copy; <span id="year"></span>, Puzzles, All rights reserved.
+		</p>
+	</footer>
+
+	<script src="${pageContext.request.contextPath}/js/main.js">
+		
+	</script>
 </body>
 </html>

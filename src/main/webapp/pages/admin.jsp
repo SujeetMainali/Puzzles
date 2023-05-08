@@ -97,7 +97,7 @@ out.println(admin);
 						<td class="btn-container">
 							<form action="${pageContext.request.contextPath}/pages/updateProduct.jsp" method="post">
 
-								<input type="hidden" name="products" value="${product.id}" />
+								<input type="hidden" name="products" value="${product.product_id}" />
 								
 								<button type="submit" class="edit-button"><i class="fa-solid fa-plus"></i>Edit
 								</button>
