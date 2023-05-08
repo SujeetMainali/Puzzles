@@ -101,7 +101,6 @@ String searchInput = request.getParameter("searchInput");
 					</a>
 				</c:forEach>
 
-
 			</div>
 		</c:if>
 	</section>
@@ -109,5 +108,11 @@ String searchInput = request.getParameter("searchInput");
 	}
 	%>
 
+	<footer id="footer">
+    	<p>&copy; <span id="year"></span>, Puzzles, All rights reserved.</p>
+    </footer>
+    
+    <script src="${pageContext.request.contextPath}/js/main.js">
+    </script>
 </body>
 </html>

@@ -106,10 +106,18 @@ String admin = (String) session.getAttribute("admin");
 					</div>
 				</div>
 			</c:forEach>
-
-
 		</div>
 	</section>
+
+	<footer id="footer">
+		<p>
+			&copy; <span id="year"></span>, Puzzles, All rights reserved.
+		</p>
+	</footer>
+
+	<script src="${pageContext.request.contextPath}/js/main.js">
+		
+	</script>
 </body>
 
 </html>

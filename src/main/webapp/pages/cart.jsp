@@ -122,5 +122,15 @@ String admin = (String) session.getAttribute("admin");
 		con.deleteCartItems(MyConstants.CART_ITEM_DELETE, id);
 	}
 	%>
+
+	<footer id="footer">
+		<p>
+			&copy; <span id="year"></span>, Puzzles, All rights reserved.
+		</p>
+	</footer>
+
+	<script src="${pageContext.request.contextPath}/js/main.js">
+		
+	</script>
 </body>
 </html>

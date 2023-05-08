@@ -200,5 +200,12 @@ out.println(admin);
 		con.deleteUser(MyConstants.USER_DELETE, email);
 	}
 	%>
+	
+	<footer id="footer">
+    	<p>&copy; <span id="year"></span>, Puzzles, All rights reserved.</p>
+    </footer>
+    
+    <script src="${pageContext.request.contextPath}/js/main.js">
+    </script>
 </body>
 </html>

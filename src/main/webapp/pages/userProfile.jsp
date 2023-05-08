@@ -80,7 +80,7 @@ String admin = (String) session.getAttribute("admin");
             <%if (!mySession.checkUser(user) || !mySession.checkIsAdmin(admin)) {
 
 	out.print(mainPath);%>/pages/login.jsp <%} else {
-				out.print(mainPath);%>/LogoutServlet<%}%>
+	out.print(mainPath);%>/LogoutServlet<%}%>
             
             "
 					method="post">
@@ -111,8 +111,8 @@ String admin = (String) session.getAttribute("admin");
 					class="user-profile-form" method="post"
 					enctype="multipart/form-data">
 					<div>
-						<input type="hidden" id="name"
-							name="id" placeholder="${user.user_id}" value="${user.user_id}" />
+						<input type="hidden" id="name" name="id"
+							placeholder="${user.user_id}" value="${user.user_id}" />
 					</div>
 					<div>
 						<label for="name">Name</label> <input type="text" id="name"
@@ -144,6 +144,10 @@ String admin = (String) session.getAttribute("admin");
 				</form>
 			</section>
 		</c:forEach>
+
+		<footer id="footer">
+			<p>&copy; 2023, Puzzles, All rights reserved.</p>
+		</footer>
 	</body>
 </c:if>
 </html>

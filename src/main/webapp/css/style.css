@@ -355,7 +355,7 @@ li {
 }
 
 #product-detail .product-price {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	margin: 0.5rem 0;
 	font-weight: bold;
 	color: red;  	
@@ -370,6 +370,7 @@ li {
 	margin-top: 1rem;
 	cursor: pointer;
 	transition: transform 0.1s ease-in;
+	margin-top: 1.7rem;
 }
 
 #product-detail .btn-order:hover {
@@ -377,21 +378,27 @@ li {
 	transform: scale(1.05);
 }
 
-#product-detail .product-rating {
-	font-size: 2rem;
+#product-detail .product-brand {
+	font-size: 1.5rem;
 }
 
+#product-detail .product-rating {
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+
+
 #product-detail .product-description i {
-	font-size: 1.5em;
-	margin-right: 1rem;
+	font-size: 1.2em;
+	margin-right: .2rem;
 }
 
 #product-detail .product-description span {
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 
 #product-detail .product-description p {
-	margin-top: 1.8rem;
+	margin-top: 1rem;
 	text-align: justify;
 	font-size: 1.1rem;
 }
@@ -661,4 +668,11 @@ li {
 #error p {
 	font-size: 1.2rem;
 	color: #6e6e6e;
+}
+
+#footer {
+	text-align: center; 
+	padding: 1.5rem;
+	background: black;
+	color: white;	
 }

@@ -10,20 +10,24 @@
 </head>
 <body>
 	<nav id="navbar">
-        <h1 class="logo">Puzzles</h1>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-            <li><a href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
-            <li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Admin</a></li>
-            <li><a href="${pageContext.request.contextPath}/pages/login.jsp">Login</a></li>
-        </ul>
+		<h1 class="logo">Puzzles</h1>
+		<ul>
+			<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+			<li><a
+				href="${pageContext.request.contextPath}/pages/product.jsp">Product</a></li>
+			<li><a href="${pageContext.request.contextPath}/pages/admin.jsp">Admin</a></li>
+			<li><a href="${pageContext.request.contextPath}/pages/login.jsp">Login</a></li>
+		</ul>
 
-        <div class="logo-container">
-            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-user"></i></a>
-            <a href="${pageContext.request.contextPath}/pages/cart.jsp"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i class="fa-solid fa-right-from-bracket"></i></a>
-        </div>
-    </nav>
+		<div class="logo-container">
+			<a href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i
+				class="fa-solid fa-user"></i></a> <a
+				href="${pageContext.request.contextPath}/pages/cart.jsp"><i
+				class="fa-solid fa-cart-shopping"></i></a> <a
+				href="${pageContext.request.contextPath}/pages/userProfile.jsp"><i
+				class="fa-solid fa-right-from-bracket"></i></a>
+		</div>
+	</nav>
 
 	<section id="add-product">
 		<form action="${pageContext.request.contextPath}/ProductAdd"
@@ -64,5 +68,15 @@
 			<button type="submit" class="btn-add">Add Product</button>
 		</form>
 	</section>
+
+	<footer id="footer">
+		<p>
+			&copy; <span id="year"></span>, Puzzles, All rights reserved.
+		</p>
+	</footer>
+
+	<script src="${pageContext.request.contextPath}/js/main.js">
+		
+	</script>
 </body>
 </html>

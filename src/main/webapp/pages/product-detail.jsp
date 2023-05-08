@@ -73,11 +73,12 @@ int productId = Integer.parseInt(prodId);
 						alt="Productt Image">
 				</div>
 				<div class="product-content">
-					<h1 class="product-title">${productDetail.name}</h1>
+					<h1 class="product-title">${productDetail.name} - ${productDetail.brand}</h1>
 					<p class="product-price">Rs. ${productDetail.price}</p>
 					<p class="product-rating">Rating: ${productDetail.rating}</p>
-					<p class="product-brand">Brand: ${productDetail.brand}</p>
-					<div class="product-description"><i class="fa-solid fa-circle-info"></i>Description
+					
+					<div class="product-description"><i class="fa-solid fa-circle-info"></i>
+					<span>Description</span>
 					<p >${productDetail.description}</p>
 					</div>
 					<form action="${pageContext.request.contextPath}/AddToCart" method="post">
@@ -105,6 +106,13 @@ int productId = Integer.parseInt(prodId);
 			</div>
 		</section>
 	</c:forEach>
+	
+	<footer id="footer">
+    	<p>&copy; <span id="year"></span>, Puzzles, All rights reserved.</p>
+    </footer>
+    
+    <script src="${pageContext.request.contextPath}/js/main.js">
+    </script>
 </body>
 
 </html>
